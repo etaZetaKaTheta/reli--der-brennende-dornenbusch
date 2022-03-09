@@ -15,6 +15,7 @@ MonoBehaviour:
   components:
   - {fileID: 1847503691799912310}
   - {fileID: 6654104180291103532}
+  - {fileID: 5740930261200864601}
 --- !u!114 &1847503691799912310
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -55,6 +56,22 @@ MonoBehaviour:
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 5.33
+--- !u!114 &5740930261200864601
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 0
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &6654104180291103532
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -67,13 +84,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
   m_Name: ColorAdjustments
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -0.64
+    m_Value: 0
   contrast:
     m_OverrideState: 0
-    m_Value: 2.8
+    m_Value: -17
   colorFilter:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -81,5 +98,5 @@ MonoBehaviour:
     m_OverrideState: 0
     m_Value: 180
   saturation:
-    m_OverrideState: 0
-    m_Value: 11.6
+    m_OverrideState: 1
+    m_Value: 4
