@@ -8,7 +8,6 @@ public class FadeBetweenCuts : MonoBehaviour
     [SerializeField] private float fadeOutTime = 1.0f;
     [SerializeField] private float transitionTime = 0.2f;
     [SerializeField] private GameObject fadeOutObject;
-    [SerializeField] private GameObject timeline;
 
     void OnEnable()
     {
@@ -27,8 +26,6 @@ public class FadeBetweenCuts : MonoBehaviour
 
         yield return new WaitForSeconds(transitionTime);
 
-        timeline.SetActive(false);
-
         image.color = Color.white;
         LeanTween.value(gameObject, 1, 0, fadeOutTime).setOnUpdate((float val) =>
         {
@@ -36,5 +33,6 @@ public class FadeBetweenCuts : MonoBehaviour
             c.a = val;
             image.color = c;
         });
+        
     }
 }

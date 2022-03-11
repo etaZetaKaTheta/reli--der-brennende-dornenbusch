@@ -161,7 +161,7 @@ public class Movement : MonoBehaviour
         else
         {
             moveSpeed = Mathf.Lerp(moveSpeed, walkSpeed, acceleration * Time.deltaTime);
-            Mathf.Lerp(camStats.fieldOfView, normalFOV, fovChangeSpeed * Time.deltaTime);
+            camStats.fieldOfView = Mathf.Lerp(camStats.fieldOfView, normalFOV, fovChangeSpeed * Time.deltaTime);
         }
     }
 
